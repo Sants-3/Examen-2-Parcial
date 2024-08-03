@@ -24,13 +24,6 @@ public class ClienteService {
         List<Prestamo> prestamos = nvCliente.getPrestamo();
         if (prestamos != null) {
             for(Prestamo prestamo:prestamos){
-                BigDecimal monto = prestamo.getMonto();
-                Double i = 0.09/12;
-                BigDecimal Total = new BigDecimal(i).multiply(monto);
-                Double b = Math.pow(1.09, 60);
-                BigDecimal TotalNumerador = new BigDecimal(b).multiply(Total);
-                Double TotalDenominador = b - 1;
-                BigDecimal TotalOperacion = new BigDecimal(TotalDenominador).divide(TotalNumerador);
 
                 // prestamo.setCuota(TotalOperacion);
                 prestamo.setCliente(nvCliente);

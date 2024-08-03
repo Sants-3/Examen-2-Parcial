@@ -40,6 +40,6 @@ public class Prestamo {
     @JoinColumn(name = "dni", referencedColumnName = "dni")
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "prestamo", cascade = CascadeType.ALL)
-    private List<Cuota> cuota;
+    // @OneToMany(mappedBy = "prestamo", cascade = CascadeType.ALL)
+    // private List<Cuota> cuota;
 }
